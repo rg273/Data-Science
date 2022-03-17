@@ -214,6 +214,32 @@ int64
 
 ![unaImagenConBoxShadow](../_src/assets/03-Numpy/numpy_array_shape.png)
 
+Un método particular es **flatten()**, que permite llevar cualquier array a una dimensión:
+
+```python
+>>> a = np.arange(0,20)
+>>> print(a)
+[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19]
+>>> b = np.reshape(a, [2,10])
+>>> print(b)
+[[ 0  1  2  3  4  5  6  7  8  9]
+ [10 11 12 13 14 15 16 17 18 19]]
+>>> c = np.reshape(a, [2,2,5])
+>>> print(c)
+[[[ 0  1  2  3  4]
+  [ 5  6  7  8  9]]
+
+ [[10 11 12 13 14]
+  [15 16 17 18 19]]]
+>>> d = c.flatten()
+>>> print(d)
+[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19]
+>>> d.shape
+(20,)
+>>> a.shape
+(20,)
+```
+
 ### Manipulando arrays
 
 De manera muy parecida a las listas, los ndarrays permiten hacer slicing con []. Sus índices empiezan en 0.
@@ -463,6 +489,47 @@ Las ufuncs corren a velocidad de código compilado C. De poder utilizarse se deb
 3.36 ms ± 275 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 ```
 
+### Diferencia entre None y np.nan
+
+Cuando tenemos un objeto None incluído en una serie, el “upcasting” de Numpy se resuelve a “object”. Cuando tenemos un np.nan, conservamos una columna de tipo float y podemos seguir operando:
+
+```python
+>>> val1 = np.array([1, None, 2, 3])
+>>> val1
+array([1, None, 2, 3], dtype=object)
+>>> val2 = np.array([1, np.nan, 3, 4])
+>>> val2
+array([ 1., nan,  3.,  4.])
+>>> val2.dtype
+dtype('float64')
+>>> for tipo in ['object','int']:
+>>>     print("Tipo:", tipo)
+>>>     %timeit np.arange(1E6, dtype=tipo).sum()
+>>>     print()
+Tipo: object
+54.2 ms ± 2.2 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+
+Tipo: int
+2.14 ms ± 315 µs per loop (mean ± std. dev. of 7 runs, 100 loops each) 
+```
+
+## Máscaras
+
+Se puede crear filtros que se denominan máscaras en base a una condición dada, para que posteriormente se puedan seleccionar los elementos que la cumplan.
+
+```python
+>>> a = np.arange(0,20).reshape(2,10)
+>>> print(a)
+[[ 0  1  2  3  4  5  6  7  8  9]
+ [10 11 12 13 14 15 16 17 18 19]]
+>>> mascara = ((a % 2) == 0)
+>>> print(mascara)
+[[ True False  True False  True False  True False  True False]
+ [ True False  True False  True False  True False  True False]]
+>>> a[mascara]
+array([ 0,  2,  4,  6,  8, 10, 12, 14, 16, 18])
+```
+
 ## Recursos adicionales
 
 * [Cien ejercicios de Numpy] (https://github.com/rougier/numpy-100)
@@ -470,7 +537,7 @@ Las ufuncs corren a velocidad de código compilado C. De poder utilizarse se deb
 
 ## Homework
 
-Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/Python-Prep/blob/4aec1885136fdcff98899d2be13c8908b39f8b21/02%20-%20Variables%20y%20Tipos%20de%20Datos/Prep_Course_Homework_02.md)
+Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/DS-M1/blob/b0e58ff3e809cb71e087f885080a346ea8208461/Clase%2003/Homework_03.ipynb)
 
 <table class="hide" width="100%" style='table-layout:fixed;'>
   <tr>
