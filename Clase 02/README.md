@@ -1,67 +1,76 @@
 ![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
-## Clase 1
+## Características de los Datos
 
-Una variable es un espacio de memoria donde guardamos un dato, ese espacio de memoria a la vez recibe un nombre y esto conforma la estructura de datos más simple que podemos encontrar.
+Los datos con los que vamos a estar trabajando, son en definitiva la fuente del conocimiento necesario que debemos adquirir para poder resolver las preguntas que nos hacemos, entonces, es preciso conocer todas sus características, algunas de ellas son:
 
-![unaImagenConBoxShadow](../_src/assets/02_imagen01.jpg)
+* Variabilidad.
+* Estadística.
+* Distribución.
+* Rangos.
 
-Por otro lado existen ciertas normas a la hora de nombrar variables:
+## Tipos de datos
 
-* El nombre no puede empezar con un número<br>
-  Por ejemplo "mi_variable" sería correcto, pero "123mi_variable" sería erróneo 
-* No se permite el uso de guiones del medio -<br>
-  Por ejemplo "mi-variable" sería erróneo
-* No se permite el uso de espacios.<br>
-  Por ejemplo "mi variable" sería erróneo
-* No usar nombres reservados para Python. Las palabras reservadas son utilizadas por Python internamente, por lo que no podemos usarlas para nuestras variables o funciones.<br>
-  Por ejemplo, a veces podríamos usar "int" ó "for" y esto nos daría error, porque como se verá más adelante, esas palabras son parte de la sintaxis de Python.
+Cuando trabajamos con [estadísticas](http://relopezbriega.github.io/tag/estadistica.html), es importante reconocer los diferentes tipos de [datos](https://es.wikipedia.org/wiki/Dato): numéricos ([discretos y continuos](https://es.wikipedia.org/wiki/Variable_discreta_y_variable_continua)), [categóricos](https://en.wikipedia.org/wiki/Categorical_variable) y ordinales. Los [datos](https://es.wikipedia.org/wiki/Dato) no son más que observaciones del mundo en que vivimos, por tanto, los mismos pueden venir en diferentes formas, no solo numérica. Por ejemplo, si le preguntáramos a nuestros amigos ¿cuántas mascotas tienen? nos podrían responder: `0, 1, 2, 4, 3, 8`; esta información por sí misma puede ser útil, pero para nuestro análisis de mascotas, nos podría servir también otro tipo de información, como por ejemplo el *género* de cada uno de nuestros amigos; de esta forma obtendríamos la siguiente información: `hombre, mujer, mujer, mujer, hombre, mujer`. Como vemos, podemos incluir a los [datos](https://es.wikipedia.org/wiki/Dato) dentro de tres categorías fundamentales: [datos cuantitativos](https://es.wikipedia.org/wiki/Cantidad) o numéricos, [datos cualitativos](https://es.wikipedia.org/wiki/Cualidad) o [categóricos](https://en.wikipedia.org/wiki/Categorical_variable) y datos ordinales.
 
-### Subtitulo
+### Datos cuantitativos
 
-Sin embargo, cuando ese dato no lo alojamos en una variable y lo utilizamos directamente, recibe el nombre de constante.
+Los [datos cuantitativos](https://es.wikipedia.org/wiki/Cantidad) son representados por números; estos números van a ser significativos si representan la medida o la cantidad observada de cierta característica. Dentro de esta categoría podemos encontrar por ejemplo: cantidades de dólares, cuentas, tamaños, número de empleados, y kilómetros por hora. Con los [datos cuantitativos](https://es.wikipedia.org/wiki/Cantidad), se puede hacer todo tipo de tareas de procesamiento de datos numéricos, tales como sumarlos, calcular promedios, o medir su variabilidad. Asimismo, vamos a poder dividir a los [datos cuantitativos](https://es.wikipedia.org/wiki/Cantidad) en [discretos y continuos](https://es.wikipedia.org/wiki/Variable_discreta_y_variable_continua), dependiendo de los valores potencialmente observables.
 
-<hr width="75%">
-  <p align="center">
-  Tip: En Python hay algunas funcionalidades ya presentes por defecto, como por ejemplo la funcion **print()** que permite mostrar una salida por pantalla y la función range() que devuelve un rango numérico según los parámetros que recibe y con la función **type()** es posible ver el tipo de dato de una variable
-  </p>
-<hr width="75%">
+* Los datos ***discretos*** solo van a poder asumir un valor de una lista de números específicos. Representan ítems que pueden ser *contados*; todos sus posibles valores pueden ser listados. Suele ser relativamente fácil trabajar con este tipo de [dato](https://es.wikipedia.org/wiki/Dato).
 
-### Ejemplo Tabla
+* Los datos ***continuos*** representan *mediciones*; sus posibles valores no pueden ser contados y sólo pueden ser descritos usando intervalos en la recta de los [números reales](https://es.wikipedia.org/wiki/N%C3%BAmero_real). Por ejemplo, la cantidad de kilómetros recorridos no puede ser medida con exactitud, puede ser que hayamos recorrido 1.7 km o 1.6987 km; en cualquier medida que tomemos del mundo real, siempre pueden haber pequeñas o grandes variaciones. Generalmente, los *datos continuos* se suelen redondear a un número fijo de decimales para facilitar su manipulación.
 
-**Operaciones aritméticas:**
+### Datos cualitativos 
 
-| Operación | Operador | Ejemplo |
-| :---      |  :----:  |    ---: |
-| Suma      | + | 3 + 5.5 = 8.5 |
-| Resta   | -  | 4 - 1 = 3  |
-| Multiplicación | *  | 4 * 2 = 8  |
-| Potenciación | 4<sup>2</sup>  | 4**2 = 16  |
-| División (Cociente) | /  | 4 / 2 = 2  |
-| División (parte entera) | //  | 14 // 3 = 4  |
-| División (resto) | %  | 14 % 3 =  2 |
+Si los [datos](https://es.wikipedia.org/wiki/Dato) nos dicen en cual de determinadas categorías no numéricas nuestros ítems van a caer, entonces estamos hablando de [datos cualitativos](https://es.wikipedia.org/wiki/Cualidad) o [categóricos](https://en.wikipedia.org/wiki/Categorical_variable); ya que los mismos van a representar determinada *cualidad* que los ítems poseen. Dentro de esta categoría vamos a encontrar [datos](https://es.wikipedia.org/wiki/Dato) como: el sexo de una persona, el estado civil, la ciudad natal, o los tipos de películas que le gustan. Los [datos categóricos](https://en.wikipedia.org/wiki/Categorical_variable) pueden tomar valores numéricos (por ejemplo, "1" para indicar "masculino" y "2" para indicar "femenino"), pero esos números no tienen un sentido matemático.
 
-### Algunos ejemplos en Python:
+### Datos ordinales
 
-```python
->>> a = 'Hola '
->>> b = 'Mundo !'
->>> print(a + b)
-Hola Mundo !
+Una categoría intermedia entre los dos tipos de [datos](https://es.wikipedia.org/wiki/Dato) anteriores, son los *datos ordinales*. En este tipo de [datos](https://es.wikipedia.org/wiki/Dato), va a existir un *orden* significativo, vamos a poder clasificar un primero, segundo, tercero, etc. es decir, que podemos establecer un *ranking* para estos [datos](https://es.wikipedia.org/wiki/Dato), el cual posiblemente luego tenga un rol importante en la etapa de análisis. Los [datos](https://es.wikipedia.org/wiki/Dato) se dividen en categorías, pero los números colocados en cada categoría tienen un significado. Por ejemplo, la calificación de un restaurante en una escala de 0 (bajo) a 5 (más alta) estrellas representa *datos ordinales*. Los *datos ordinales* son a menudo tratados como [datos categóricos](https://en.wikipedia.org/wiki/Categorical_variable), en el sentido que se suelen agrupar y ordenar. Sin embargo, a diferencia de los [datos categóricos](https://en.wikipedia.org/wiki/Categorical_variable), los números sí tienen un significado matemático.
 
->>> x = 3
->>> y = 12
->>> print(x + y)
-15
+## Falencias en los datos
 
->>> print(a + x)
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-~\AppData\Local\Temp/ipykernel_18232/136165486.py in <module>
-----> 1 print(a + x)
+Como primera medida, antes de comenzar a realizar las tareas de análisis, vamos a encontrarnos con ciertas cuestiones que hacen a la calidad y fiabilidad del dato, y debemos resolverlas, entre ellas:
 
-TypeError: can only concatenate str (not "int") to str
-```
+* Faltantes: ¿Qué hacer?
+* Rangos de datos numéricos.
+* Normalización.
+* Errores: Su tratamiento.
+
+## ¿Qué es el EDA?
+
+Eda es la sigla en inglés para Exploratory Data Analysis y consiste en una de las primeras tareas que tiene que desempeñar el Científico de Datos. Es cuando revisamos por primera vez los datos que nos llegan, por ejemplo un archivo CSV que nos entregan y deberemos intentar comprender “¿de qué se trata?”, vislumbrar posibles patrones y reconociendo distribuciones estadísticas que puedan ser útiles en el futuro.
+
+Lo ideal es que tengamos un objetivo que nos hayan “adjuntado” con los datos, que indique lo que se quiere conseguir a partir de esos datos. Por ejemplo, nos pasan un excel y nos dicen “Queremos predecir ventas a 30 días”, ó “Clasificar casos malignos/benignos de una enfermedad”, “Queremos identificar audiencias que van a realizar re-compra de un producto”, “queremos hacer pronóstico de fidelización de clientes/abandonos”, “Quiero detectar casos de fraude en mi sistema en tiempo real”.
+
+## EDA deconstruido
+
+Al llegar un archivo, lo primero que deberíamos hacer es intentar responder:
+
+* ¿Cuántos registros hay?
+* ¿Son demasiado pocos?
+* ¿Son muchos y no tenemos Capacidad (CPU+RAM) suficiente para procesarlo?
+* ¿Están todas las filas completas ó tenemos campos con valores nulos?
+* En caso que haya demasiados nulos: ¿Queda el resto de información inútil?
+* ¿Que datos son discretos y cuales continuos?
+* Muchas veces sirve obtener el tipo de datos: texto, int, double, float
+* Si es un problema de tipo supervisado:
+* ¿Cuál es la columna de “salida”? ¿binaria, multiclase?
+* ¿Esta balanceado el conjunto salida?
+* ¿Cuales parecen ser features importantes? ¿Cuales podemos descartar?
+* ¿Siguen alguna distribución?
+* ¿Hay correlación entre features (características)?
+* En problemas de NLP es frecuente que existan categorías repetidas ó mal tipeadas, ó con mayusculas/minúsculas, singular y plural, por ejemplo “Abogado” y “Abogadas”, “avogado” pertenecerían todos a un mismo conjunto.
+* ¿Estamos ante un problema dependiente del tiempo? Es decir un TimeSeries.
+* Si fuera un problema de Visión Artificial: ¿Tenemos suficientes muestras de cada clase y variedad, para poder hacer generalizar un modelo de Machine Learning?
+* ¿Cuales son los Outliers? (unos pocos datos aislados que difieren drásticamente del resto y “contaminan” ó desvían las distribuciones)
+* Podemos eliminarlos? es importante conservarlos? son errores de carga o son reales?
+* ¿Tenemos posible sesgo de datos? (por ejemplo perjudicar a clases minoritarias por no incluirlas y que el modelo de ML discrimine)
+* Puede ocurrir que tengamos set de datos incompletos y debamos pedir a nuestro cliente/proveedor ó interesado que nos brinde mayor información de los campos, que aporte más conocimiento ó que corrija campos.
+
+La importancia de este análisis es sobre todo la de darnos un vistazo sobre la calidad de datos que tenemos y hasta puede determinar la continuidad o no de un proyecto.
+Siempre dependerá de los datos que tengamos, en cantidad y calidad y por supuesto nunca deberemos dejar de tener en vista **el objetivo**, el propósito que buscamos lograr. Siempre debemos apuntar a lograr eso con nuestras acciones.
 
 ## Homework
 
