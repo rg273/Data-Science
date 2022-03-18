@@ -602,8 +602,7 @@ Para aplicar funciones a todos los elementos de una columna se utiliza el siguie
 ```python
 >>> import pandas as pd
 >>> from math import log
->>> df = pd.read_csv(
-'https://raw.githubusercontent.com/asalber/manual-python/master/datos/colesterol.csv')
+>>> df = pd.read_csv('colesterol.csv')
 >>> print(df['altura'].apply(log))
 0     0.582216
 1     0.548121
@@ -670,8 +669,7 @@ Para eliminar columnas de un DataFrame se utilizan los siguientes métodos:
 
 ```python
 >>> import pandas as pd
->>> df = pd.read_csv(
-'https://raw.githubusercontent.com/asalber/manual-python/master/datos/colesterol.csv')
+>>> df = pd.read_csv('colesterol.csv')
 >>> edad = df.pop('edad')
 >>> print(df)
                               nombre    sexo  peso  altura    colesterol
@@ -696,8 +694,7 @@ Para añadir una fila a un DataFrame se utiliza el siguiente método:
 
 ```python
 >>> import pandas as pd
->>> df = pd.read_csv(
-'https://raw.githubusercontent.com/asalber/manual-python/master/datos/colesterol.csv')
+>>> df = pd.read_csv('colesterol.csv')
 >>> df = df.append(pd.Series(['Carlos Rivas', 28, 'H', 89.0, 1.78, 245.0], index=['nombre','edad','sexo','peso','altura','colesterol']), ignore_index=True)
 >>> print(df.tail())
                               nombre  edad sexo    peso  altura    colesterol
@@ -716,8 +713,7 @@ Para eliminar filas de un DataFrame se utilizan el siguiente método:
 
 ```python
 >>> import pandas as pd
->>> df = pd.read_csv(
-'https://raw.githubusercontent.com/asalber/manual-python/master/datos/colesterol.csv')
+>>> df = pd.read_csv('colesterol.csv')
 >>> print(df.drop([1, 3]))
                               nombre  edad sexo   peso  altura  colesterol
 0       José Luis Martínez Izquierdo    18    H   85.0    1.79       182.0
@@ -750,8 +746,7 @@ Para ordenar un DataFrame de acuerdo a los valores de una determinada columna se
 
 ```python
 >>> import pandas as pd
->>> df = pd.read_csv(
-'https://raw.githubusercontent.com/asalber/manual-python/master/datos/colesterol.csv')
+>>> df = pd.read_csv('colesterol.csv')
 >>> print(df.sort_values('colesterol'))
                               nombre  edad sexo   peso  altura  colesterol
 4               Marisa López Collado    46    M   51.0    1.58       148.0
@@ -769,8 +764,7 @@ Para eliminar las filas de un DataFrame que contienen datos desconocidos NaN o n
 
 ```python
 >>> import pandas as pd
->>> df = pd.read_csv(
-'https://raw.githubusercontent.com/asalber/manual-python/master/datos/colesterol.csv')
+>>> df = pd.read_csv('colesterol.csv')
 >>> print(df.dropna())
                               nombre  edad sexo   peso  altura  colesterol
 0       José Luis Martínez Izquierdo    18    H   85.0    1.79       182.0
