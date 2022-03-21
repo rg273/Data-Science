@@ -13,7 +13,7 @@ Las principales características de esta librería son:
 * Permite trabajar con series temporales.
 * Realiza todas estas operaciones de manera muy eficiente.
 
-### Cómo instalar NumPy
+### Cómo instalar Pandas
 
 ```shell
 pip install pandas
