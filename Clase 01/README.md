@@ -8,43 +8,43 @@ Posiblemente la primera computadora fue creada por los **antiguos griegos** el c
 ![Mecanismo Anticitera](../_src/assets/00-IntroToCS/computadora-griega.jpg)
 <h5>Mecanismo Anticitera</h5>
 
-Miles de años después se creo el **telar de Jacquard**, en donde las se creaban tarjetas con agujeros que representaban la información que tiene que hacer un pedazo de tela.
+Miles de años después se creo el **telar de Jacquard**, que funcionaba con tarjetas que se creaban con aujeros que representaban la información que el telar tenía que hacer en un pedazo de tela.
 
 ![Telar de Jacquard](../_src/assets/00-IntroToCS/Telar-de-Jacquard.jpg)
 <h5>Telar de Jacquard</h5>
 
-Después llego el **motor analítico de Charles Babbage**, el cual ocupo la tecnología de punta en su época para poder realizar cálculos.
+Después llego el **motor analítico de Charles Babbage**, el cual ocupó la tecnología de punta en su época para poder realizar cálculos.
 
 ![Motor analítico de Charles Babbage](../_src/assets/00-IntroToCS/motor-babbage.jpg)
 <h5>Motor analítico de Charles Babbage</h5>
 
-A finales del siglo XIX el gobierno de EE.UU. tenia serios problemas para realizar los censos como mandaba la constitución. En este momento fue cuando llego la **máquina tabuladora**, la cual se utilizo para realizar los censos con tarjetas, obteniendo resultados mas rápidos y certeros.
+A finales del siglo XIX el gobierno de EE.UU. tenia serios problemas para realizar los censos como mandaba la constitución. En este momento fue cuando llegó la **máquina tabuladora**, la cual se utilizó para realizar los censos con tarjetas, obteniendo resultados más rápidos y certeros.
 
 ![Máquina Tabuladora](../_src/assets/00-IntroToCS/maquina-tabuladora.jpg)
 <h5>Máquina Tabuladora</h5>
 
-Antiguamente existía la **profesión de computadora**, la cual eran personas que se dedicaban a seguir ciertas instrucciones para obtener los resultados. Sin embargo estos resultados estaban plagados de errores. Al inicio del siglo XX ya existían compañías que tenían la necesidad de realizar cálculos exactos y a gran escala. Es aquí donde llegan **Alan Turing** y **Alonzo Church** con la idea de que todos los algoritmos desarrollados por la humanidad podían ser reducidas a una maquina imaginaria, que tuviera una cinta infinita donde apuntarían símbolos y estos símbolos se pudieran manipular. Es aquí donde se comenzó la carrera para crear la primera computadora electrónica, el cual fue el **ENIAC**.
+Antiguamente existía la **profesión de computadora**, la cual eran personas que se dedicaban a seguir ciertas instrucciones para obtener los resultados. Sin embargo estos resultados estaban plagados de errores. Al inicio del siglo XX ya existían compañías que tenían la necesidad de realizar cálculos exactos y a gran escala. Es aquí donde llegan **Alan Turing** y **Alonzo Church** con la idea de que todos los algoritmos desarrollados por la humanidad podían ser reducidas a una máquina imaginaria, que tuviera una cinta infinita donde apuntarían símbolos y estos símbolos se pudieran manipular. Gracias a esa idea, se comenzó la carrera para crear la primera computadora electrónica, el cual fue el **ENIAC**.
 
 ![Alonzo Chruch y Alan Turing](../_src/assets/00-IntroToCS/church_alonzo.jpg)
 ![Alonzo Chruch y Alan Turing](../_src/assets/00-IntroToCS/alan-turing.jpg)
 ![Alonzo Chruch y Alan Turing](../_src/assets/00-IntroToCS/eniac.jpg)
 <h5>Alonzo Chruch, Alan Turing y la maquina ENIAC respectivamente.</h5>
 
-**John von Neumann** se dio cuenta de que en el hardware no solo se podía almacenar el poder de computo, también los programas para ejecutar. A esta arquitectura se le llama la **arquitectura de von Neumman.** De esta arquitectura nace la máquina **EDVAC** (Electronic Discrete Automatic Computer).
+**John von Neumann** se dio cuenta de que en el hardware no solo se podía almacenar el poder de cómputo, también los programas para ejecutar. A esta arquitectura se le llama la **arquitectura de von Neumman.** De esta arquitectura nace la máquina **EDVAC** (Electronic Discrete Automatic Computer).
 
 ![John von Neumann junto a la maquina EDVAC.](../_src/assets/00-IntroToCS/neumann-edvac.jpeg)
-<h5>John von Neumann junto a la maquina EDVAC.</h5>
+<h5>John von Neumann junto a la máquina EDVAC.</h5>
 
 ![La arquitectura von Neumann.](../_src/assets/00-IntroToCS/arquitectura-neumann.png)
 <h5>La arquitectura von Neumann.</h5>
 
-Con la llegada de los **microchips** llego la pauta para la computación de hoy en día. Estos microchips se hicieron tan pequeños con el tiempo usando la tecnología de la **fotónica.**
+Con la llegada de los **microchips** llegó la pauta para la computación de hoy en día. Estos microchips, con el tiempo, lograron ser tan pequeños gracias a la tecnología de la **fotónica.**
 
 ![Microchip.](../_src/assets/00-IntroToCS/microchips.jpg)
 ![Oblea de Silicio.](../_src/assets/00-IntroToCS/oblea-silicio.jpg)
 <h5>Microchip y Oblea de Silicio respectivamente.</h5>
 
-Ya en nuestros tiempos llego la **nube**, el cual son data centers que no son mas que miles o millones de computadoras.
+Ya en nuestros tiempos llegó la **nube**, que son data centers que no son más que miles o millones de computadoras.
 
 ![Sala de servidores de una nube.](../_src/assets/00-IntroToCS/nube.jpg)
 <h5>Sala de servidores de una nube.</h5>
@@ -69,7 +69,7 @@ En última instancia, ingeniería computacional. En esta instancia podemos encon
 ## Circuitos Eléctricos
 
 Para poder entender el funcionamiento de una computadora y sus orígenes, antes tenemos que conocer qué es y cómo funciona un circuito eléctrico.
-Un circuito eléctrico es una interconexión de componentes eléctricos que transporta corriente eléctrica a través de una trayectoria cerrada. Imaginemos una batería, ahora pensemos que dicha batería está conectada a través de cables a una lámpara, si deseamos prender la lámpara necesitamos que la misma reciba corriente, ¿Cómo haríamos eso? Podemos tener un interruptor el cual, al cerrarlo prenda la lámpara.
+Un circuito eléctrico es una interconexión de componentes eléctricos que transporta corriente eléctrica a través de una trayectoria cerrada. Imaginemos una batería, ahora pensemos que dicha batería está conectada a través de cables a una lámpara, si deseamos prender la lámpara necesitamos que la misma reciba corriente, ¿Cómo haríamos eso? Podemos tener un interruptor que, al cerrarlo prende la lámpara.
 
 ![AND Operator](../_src/assets/00-IntroToCS/AND.png)
 
@@ -120,7 +120,7 @@ A | NOT
 ## Half Adder
 
 En función de las compuertas o puertas lógicas y a través de la combinación de estas podemos lograr diversas operaciones, por ejemplo un sumador de números.
-En la escuela nos enseñaron a sumar con números decimales pero, las computadoras en su interior trabajan con un sistema binario, es decir 1 y 0s.
+En la escuela nos enseñaron a sumar con números decimales pero, las computadoras en su interior trabajan con un sistema binario, es decir sistema numérico de dos dígitos el 1 y el 0.
 Por ejemplo, si quisiéramos sumar 19+24 sabemos que la suma de 9+4 = 13, por lo tanto en el resultado final en la unidad nos queda un 3 y debemos “llevarnos” la decena. Luego, para la decena debemos sumar 1 + 2 + 1 = 4. Obteniendo como resultado final 43.
 En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND mientras que el XOR efectúa la suma. Si quisiéramos trasladar el mismo ejemplo ya mencionado, en primer lugar debemos conocer cual es el valor de 19 y 24 en binario. Más adelante veremos cómo hacer dicha transformación, pero por ahora, confíen que 19 = 10011 y 24 = 11000.
 
@@ -185,7 +185,7 @@ MCMV = mil  + (mil - cien) + cinco
 
 Un sistema posicional es aquel en donde cada dígito posee un valor que depende de su posición relativa, la cual está determinada por la base, número de dígitos necesarios para escribir cualquier número. En el caso de un sistema decimal, base 10, ya que el número de dígitos es 10, de 0 a 9.
 
-Por lo tanto, además del número de unidades que representa, considerado en forma asilado, tiene un significado o peso distinto según la posición que ocupa en el grupo de caracteres del que forma parte.
+Por lo tanto, además del número de unidades que representa, considerado en forma aislado, tiene un significado o peso distinto según la posición que ocupa en el grupo de caracteres del que forma parte.
 
 ### Binario <> Decimal
 
@@ -214,10 +214,10 @@ Realizamos la operación inversa, convertimos 21 en binario.
 
 Ahora leemos de abajo hacia arriba los restos, al concatenarlos, obtendremos nuestra solución en binario 10101.
 
-## Lenguaje de Maquina
+## Lenguaje de Máquina
 
-Recordemos que las computadoras, solo entienden 0s y 1s. Ahora bien, ¿Nosotros escribimos en 1's y 0's? No.
-Existen lenguajes de alto y bajo nivel que luego deben ser traducidos a lenguaje maquina, lenguaje interpretable por la computadora. La "traducción" lo llamaremos compilación.
+Recordemos que las computadoras, sólo entienden ceros (0) y unos (1). Ahora bien, ¿Nosotros escribimos en 1's y 0's? No.
+Existen lenguajes de alto y bajo nivel que luego deben ser traducidos a lenguaje maquina, lenguaje interpretable por la computadora. La "traducción" la llamaremos compilación.
 
 ![Compilar](../_src/assets/00-IntroToCS/compilation.png)
 
