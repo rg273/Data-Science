@@ -91,11 +91,11 @@ Ahora que tenemos un _mapa_ del laberinto, tenemos que mejorar el algoritmo para
 
 Listo! hemos creado un algoritmo capaz que salir de un laberinto!
 
-_Le encuentran algún problema a cómo está definido el algortimo? Podría fallar en este ejemplo? Lo podrían implementar en javascript?_
+_Le encuentran algún problema a cómo está definido el algortimo? Podría fallar en este ejemplo? Lo podrían implementar en Python?_
 
 ## ¿Qué hace bueno a un algoritmo?
 
-1. Resuelve un problema: Este es el objetivo principal del algoritmo, fue diseñado para eso. Si no cumple el objetivo, no sirve para nada :S.
+1. Resuelve un problema: Este es el objetivo principal del algoritmo, fue diseñado para eso. Si no cumple el objetivo, no nos sirve.
 2. Debe ser comprensible: El mejor algoritmo del mundo no te va a servir si es demasiado complicado de implementar.
 3. Hacerlo eficientemente: No sólo queremos tener la respuesta perfecta (o la más cercana), si no que también queremos que lo haga usando la menor cantidad de recursos posibles.
 
@@ -177,7 +177,7 @@ Otros algoritmos pueden requerir otros recursos, como por ejemplo algún algorit
 
 ### Circunstancias
 
-Como nos podemos imaginar, un mismo algoritmo puede tardar mucho o poco según el caso y los datos que se usan como input. Por ejemplo, un algoritmo para ordenar puede tardar muy poco si los datos que tienen que ordernar ya vienen ordenados! O puede tardar muchísimo si vienen ordenado en el orden inverso del que queremos, por ejemplo.
+Como nos podemos imaginar, un mismo algoritmo puede tardar mucho o poco según el caso y los datos que se usan como input. Por ejemplo, un algoritmo para ordenar puede tardar muy poco si los datos que tienen que ordernar ya vienen ordenados! O puede tardar muchísimo si vienen ordenados en el orden inverso del que queremos, por ejemplo.
 Entonces, para cada algoritmo podemos considerar su complejidad en las siguientes circunstancias:
 
 * Todos los casos
@@ -195,11 +195,9 @@ Ahora... ¿Por qué nos importa medir la complejidad de los algoritmos? Básicam
 
 Vamos a usar una función que sirve de cota superior  de otra función cuando el argumento tiende a infinito.
 
-![asintotica](../_src/assets/06-Algoritmos-I/asintotica.png)
+![asintotica](../_src/assets/08-Algoritmos_1/asintotica.png)
 
 Una función f(x) pertenece a O(g(x)) cuando existe una constante positiva c tal que a partir de un valor x0, f(x) no sobrepasa a cg(x). Quiere decir que la función f es inferior a g a partir de un valor dado salvo por un factor constante.
-
-![ChemestryDog](../_src/assets/06-Algoritmos-I/chemestrydog.jpg)
 
 No se preocupen! es mucho más simple que eso. La notación _O grande_ intenta analizar la complejidad de los algoritmos según crece el número de entradas ( _n_ ) que tiene que analizar, en general es el tamaño del dataset que usa como entrada. Y lo que busca es una función que crezca de una forma con respecto a _n_ ( # de entradas ) tal que nuestro algoritmo nunca crezca más rápido que esa función, aunque si puede crecer más lento. Básicamente, estamos buscando algo para poder decir: mirá este algoritmo nunca va a tardar más que esto, capaz tarda menos, pero más no.
 Esto nos va a servir mucho, porque vamos a poder decidir si un algoritmo es bueno o no en función de la cantidad de datos que vamos a analizar, por ejemplo: si tuvieramos que ordenar dos números, seguramente cualquier algoritmo que usemos lo va terminar en un par de milisegundos, si tenemos que ordenar 10 o 100 tambien... pero si tenemos que ordernar 1.000.000 de números ya cambia la cosa, habrá algoritmos que los ordenen en segundos y otros que pueden llegar a tardar horas! En fin, según el problema vamos a poder decidir que necesitamos.
@@ -218,72 +216,61 @@ Sigamos esta lista de pasos para entender rápidamente cuál es la función supe
 
 Regla tres: Si una función es más grande que la otra podés _'redondear'_ y tomar la función más grande. Miren este caso:
 
-![nnn](../_src/assets/06-Algoritmos-I/nnn.png)
+![nnn](../_src/assets/08-Algoritmos_1/nnn.png)
 
 Fijensé cúan importante es N cuando el tamaño crece (que es justamente el caso que nos interesa).
 
 Encontrar un máximo en un arreglo:
 
-```js
-var max = array[0];
-for( var i = 0; i <= array.length; i++){
- if( array[i] > max) {
-  max = array[i];
- }
-}
-console.log(max);
-// O ( N ) 
+```python
+>>> max = arreglo[0]
+>>> for elemento in arreglo:
+>>>   if (elemento > max):
+>>>     max = elemento
+>>> print(max)
+>>> # O ( N ) 
 ```
 
 Máximo y Mínimo: 
 
-```javascript
-var max = array[0];
-for( var i = 0; i <= array.length; i++){
- if( array[i] > max) {
-  max = array[i];
- }
-}
-var min = array[0];
-for( var i = 0; i <= array.length; i++){
- if( array[i] < max) {
-  min = array[i];
- }
-}
-
-console.log(max);
-console.log(min);
-}; // O( N + N) = O(2N)
+```python
+>>> max = arreglo[0]
+>>> for elemento in arreglo:
+>>>   if (elemento > max):
+>>>     max = elemento
+>>> 
+>>> min = arreglo[0]
+>>> for elemento in arreglo:
+>>>   if (elemento < min):
+>>>     min = elemento
+>>> print(max)
+>>> print(min)
+>>> # O( N + N) = O(2N)
 ```
 
 Mejorando un algoritmo:
 
-```javascript
-var max = array[0];
-var min = array[0];
-for( var i = 0; i <= array.length; i++){
- if( array[i] > max) {
-  max = array[i];
- }
- if( array[i] < min){
-  min = array[i]
- }
-}
-console.log(max);
-console.log(min);
-}; // O( N ) = O(N)
+```python
+>>> max = arreglo[0]
+>>> min = arreglo[0]
+>>> for elemento in arreglo:
+>>>   if (elemento > max):
+>>>     max = elemento
+>>>   if (elemento < min):
+>>>     min = elemento
+>>> print(max)
+>>> print(min)
+>>> # O( N ) = O(N)
 ```
 
 Buscar elementos iguales en un arreglo:
 
-```javascript
-for( var i = 0; i <= array.length; i++){
- for( var j = 0; j <= array.length; j++){
-   if(array[i] === array[j]){
-    return true;
-   }
- }
-};// O( N x N) = O (n²)
+```python
+>>> for elemento_1 in arreglo:
+>>>   for elemento_2 in arreglo:
+>>>     if (elemento_1 == elemento_2):
+>>>       return True
+>>> # O( N x N) = O (n²)
 ```
 
 #### Ejemplos de Funciones Típicas
@@ -293,8 +280,8 @@ for( var i = 0; i <= array.length; i++){
 Una operación simple es O(1), o sea que siempre tarda lo mismo.
 Por ejemplo
 
-```javascript
-var max = 10;
+```python
+>>> max = 10
 ```
 
 Ojo, no importa si tuviesen un millón de declaraciones de variables, como siempre tarda lo mismo en correr el algoritmo sigue siendo O(1). No importa que tarde más cuando haya más declaraciones, importa que no tarde más para mayor cantidad de entradas.
@@ -305,10 +292,9 @@ Generalmente hace una acción por cada entrada.
 
 Ej:
 
-```javascript
-array.forEach( function(elem){
- console.log(elem * 2);
-})
+```python
+>>> for elemento in arreglo:
+>>>   print(elemento * 2)
 ```
 
 ##### O(n²)
@@ -316,16 +302,13 @@ array.forEach( function(elem){
 Para por cada entrada, recorre todas las entradas de nuevo.
 
 Ej:
-
-```javascript
-array.forEach( function(elem){
- array.forEach( function(elemdos){
-  console.log(elem * elemdos);
- })
-})
+```python
+>>> for elemento_1 in arreglo:
+>>>   for elemento_2 in arreglo:
+>>>     print(elemento_1 * elemento_2)
 ```
 
-##### O(nc) N elevado a la c
+##### O(N<sup>c</sup>) N elevado a la c
 
 Es el concepto general del anterior, por cada entrada el algoritmo recorre todas las demás entradas c veces.
 
@@ -337,9 +320,7 @@ Tambien podemos encontrar algoritmo que sean O de la raiz de N, ó O de N elevad
 
 Es el caso del juego de búsqueda que hicimos! se aplica en problemas donde en cada paso tenemos que recorrer la mitad de las entradas que quedan.
 
-##### O ( N! ) El horror, hermano
-
-![cat](../_src/assets/06-Algoritmos-I/cat.jpg)
+##### O ( N! )
 
 N factorial, quiere decir: N *N-1* N-2 *N-3* ... * 1 .
 Por ejemplo: 4! = 4\*3\*2\*1 = 24
@@ -358,19 +339,19 @@ Por ejemplo, si tengo los número 1,2 y 3. Puede haber 3! combinaciones distinta
 
 #### Comparación Gráfica
 
-![Big-o](../_src/assets/06-Algoritmos-I/bigo.png)
+![Big-o](../_src/assets/08-Algoritmos_1/bigo.png)
 
 En la imagen de arriba podemos ver una comparación gráfica de las distintas complejidades de los algoritmos.
 
 Si tuvieramos una compu es capaz de ejecutar 1.000.000 instrucciones por segundo (un poco optimista para las compus de hoy) , veamos cuanto tiempo tardarían algoritmos de distinta complejidad  en terminar de correr con un N de entrada de 1000.
 
-![tablaTiempo](../_src/assets/06-Algoritmos-I/tablatiempo.png)
+![tablaTiempo](../_src/assets/08-Algoritmos_1/tablatiempo.png)
 
 Sorprendente, no? Miren [esto](https://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i#Historia)
 
 Ahora pensemos el problema al reves. ¿Qué cantidad de datos podría procesar cada algoritmo en un segundo?:
 
-![tablaSegundo](../_src/assets/06-Algoritmos-I/tablasegundo.png)
+![tablaSegundo](../_src/assets/08-Algoritmos_1/tablasegundo.png)
 
 Al primero podemos tirarle la cantidad de datos que quisieramos! (de hecho tendriamos un problema de memoria, más que de tiempo).
 A los últimos los vamos a poder usar sólamente con entradas que sean muy pequeñas... si no, vamos a tener que esperar mucho tiempo...
@@ -390,7 +371,7 @@ solucion 1: -10 + -50 + 60 = 0
 
 En este caso, fue fácil descubrir un subset, pero si el set hubiese sido más grande nos hubiese costado mucho poder afirmar que existe o no un subset que sume cero, de hecho la complejidad de este algoritmo seria de O(2n). Lo importante es que podemos determinar si una solución es correcta o no usando de forma _determinítica_ (haciendo la suma), por lo tanto podriamos crear un algoritmo no determinístico, que eliga al azar una seria de números y los sume para ver si dan cero. De esta forma, podríamos encontrar _algunas_ soluciones, pero nunca vamos a estar seguros de haber encontrado __todas__.
 
-Ahora, piensen que en algún momento alguien puede descubrir (o inventar ) un algoritmo que resuelta este problema en tiempo deterministico, de ahí viene la pregunta filosofica que se hacen los matemáticos computacionales:
+Ahora, piensen que en algún momento alguien puede descubrir (o inventar ) un algoritmo que resuelva este problema en tiempo deterministico, de ahí viene la pregunta filosofica que se hacen los matemáticos computacionales:
 
 ```js
 P = NP ?
@@ -408,7 +389,7 @@ Veamos algunos algoritmos:
 
 Este es tal vez uno de los más simples, y consiste básicamente en extraer el elemento del conjunto y agregarlo en la posición que le corresponde según el ordenamiento que estemos usando. Para hacerlo el algoritmo tiene que ir viendo cada uno de los elementos que ya están y compararlo con el extraido, hasta encontrar la posición que corresponde.
 
-![insertionSort](../_src/assets/06-Algoritmos-I/insertion.gif)
+![insertionSort](../_src/assets/08-Algoritmos_1/insertion.gif)
 
 Siendo así, y analizando el peor caso (sería que cada elemento que saquemos vaya al final de la lista): para el primero necesitariamos N pasos, para el segundo N-1, para el tercero N-2 y así sucesivamente. Esto es una suma triangular, y se puede demostrar que el resultado es `n * (n+1) /2`
 
@@ -421,7 +402,7 @@ Siendo así, y analizando el peor caso (sería que cada elemento que saquemos va
 
 O sea que para el peor caso este algoritmo tiene una complejidad de `O(n²)`. Y en el mejor de los casos, donde ya estaban ordenados los elementos, tiene que recorrer todos los elementos una vez, por lo tanto en el mejor caso tiene complejidad `O(n)`.
 
-![insertionBest](../_src/assets/06-Algoritmos-I/insertionbest.gif)
+![insertionBest](../_src/assets/08-Algoritmos_1/insertionbest.gif)
 
 O sea este algoritmo nos puede servir en el caso que sepamos que los datos pueden venir _casi_ ordenados!
 
@@ -429,7 +410,7 @@ O sea este algoritmo nos puede servir en el caso que sepamos que los datos puede
 
 Selection Sort intenta ordenar por posición, es decir empieza en la posicion mínima y busca el elemento que corresponde a ese lugar. Básicamente, empieza buscando el primer mínimo (si ordenamos en forma creciente ) y lo pone en la primera posición, luego para la segunda posición vuelve a buscar el mínimo pero dentro de los elementos que quedan, así sucesivamente hasta que no quedan elementos por ordenar.
 
-![selectionSort](../_src/assets/06-Algoritmos-I/selection.gif)
+![selectionSort](../_src/assets/08-Algoritmos_1/selection.gif)
 
 O sea que para cada elemento de la lista, tenemos que recorrer n-1 elementos restantes. Por lo tanto, la primera vez vamos a recorrer `n` elementos, la segunda vez `n-1` y así. O sea que estamos en un caso muy parecido al insertionSort; o sea que la complejidad de Selection Sort es también `O( n )`. Este algoritmo es independiente de cómo vengan ordenado los datos, ya que siempre tiene que recorrer los mismos elementos. Lo bueno de este algoritmo, además de ser muy simple y fácil de implementar, es que no necesita mucha memoria para correr.
 
@@ -440,7 +421,7 @@ Este algoritmo es muy simple:
  1. Recorré los elementos: si dos items adyacentes estan desordenados, hacé un swap.
  2. Si terminas un recorrido sin hacer un swap, ya está ordenado.
 
-![BubbleSort](../_src/assets/06-Algoritmos-I/bubblesort.gif)
+![BubbleSort](../_src/assets/08-Algoritmos_1/bubblesort.gif)
 
 Como verán la perfomance cambia drásticamente según el orden original de los datos. De hecho, en el mejor caso, el algoritmo terminá en `O (n)`. Aunque si estuvieran en el orden inverso, va a tener que recorrer el arreglo n veces por cada elemento, llegando así a tener una complejidad `O(N²)`. Es bueno conocerlo, ya que nos puede servir en casos donde los datos no vienen tan desordenados, ya que este algoritmo los ordenará más rápidos que los demás.
 

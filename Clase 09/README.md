@@ -12,17 +12,17 @@ Además _QuickSort_ es recursivo, o sea que se llama a sí mismo. Básicamente e
 * La lista queda separada en dos sublistas, una formada por los elementos a la izquierda del pivote, y otra por los elementos a su derecha.
 * Repetir este proceso de forma recursiva para cada sublista mientras éstas contengan más de un elemento. Una vez terminado este proceso todos los elementos estarán ordenados.
 
-![QuickSort](../_src/assets/06-Algoritmos-I/Sorting_quicksort_anim.gif)
+![QuickSort](../_src/assets/09-Algoritmos_2/Sorting_quicksort_anim.gif)
 
 Como se puede suponer, la eficiencia del algoritmo depende de la posición en la que termine el pivote elegido.
 
 En el mejor caso, el pivote termina en el centro de la lista, dividiéndola en dos sublistas de igual tamaño. En este caso, el orden de complejidad del algoritmo es `O(n·log n)`.
 
-![QuickSortBest](../_src/assets/06-Algoritmos-I/quicksortBest.png)
+![QuickSortBest](../_src/assets/09-Algoritmos_2/quicksortBest.png)
 
 En el peor caso, el pivote termina en un extremo de la lista. El orden de complejidad del algoritmo es entonces de `O(n²)`.
 
-![QuickSortWorst](../_src/assets/06-Algoritmos-I/quicksortWorst.png)
+![QuickSortWorst](../_src/assets/09-Algoritmos_2/quicksortWorst.png)
 
 El peor caso dependerá de la implementación del algoritmo, aunque habitualmente ocurre en listas que se encuentran ordenadas, o casi ordenadas. Pero principalmente depende del pivote, si por ejemplo el algoritmo implementado toma como pivote siempre el primer elemento del array, y el array que le pasamos está ordenado, siempre va a generar a su izquierda un array vacío, lo que es ineficiente.
 En el caso promedio, el orden es `O(n·log n)`.
@@ -35,11 +35,11 @@ Este algoritmo está inspirado en QuickSort, así que tambien es recursivo. Lo q
 * Ordena recursivamente los dos grupos
 * Junta (o mergea) los grupos ordenados.
 
-![MergeSort](../_src/assets/06-Algoritmos-I/mergesort.gif)
+![MergeSort](../_src/assets/09-Algoritmos_2/mergesort.gif)
 
 Ahora veamos su complejidad, que es similar al mejor caso de Quicksort. En cada nivel ( sabemos que hay `log(n)` niveles porque se divide en dos) se realizan `n` operaciones, una por cada elemento.
 
-![MergeSortTime](../_src/assets/06-Algoritmos-I/mergesortTime.png)
+![MergeSortTime](../_src/assets/09-Algoritmos_2/mergesortTime.png)
 
 Por lo tanto el algoritmo tiene una complejidad de `O (N * log( N ))` en todos los casos, sin importar como esté ordenando al principio!
 Lo malo de este algoritmo es que necesita más memoria que los demás algoritmos.
@@ -48,13 +48,13 @@ Lo malo de este algoritmo es que necesita más memoria que los demás algoritmos
 
 ### Heapsort
 
-Este algoritmo tambien tiene orden de `O(n·log n)` pero, contrario a Quicksort, este no depende fuertemente del estado inicial del ordenamiento. Este algoritmo está basado en la estrucura de datos conocida como `heap`, de ahi el nombre. :smile:
+Este algoritmo tambien tiene orden de `O(n·log n)` pero, contrario a Quicksort, este no depende fuertemente del estado inicial del ordenamiento. Este algoritmo está basado en la estrucura de datos conocida como `heap`, de ahi el nombre.
 
 Primero analizemos qué complejidad tiene el armado del Heap. Cómo habiamos visto, cuando ingresamos un nuevo nodo, tenemos que ver si se siguen cumpliendo las dos reglas de un _heap_: que sea un arbol binario completo, y que cada nodo sea mayor que sus hijos. Básicamente lo que tenemos que controlar es que cuando ingresamos un nuevo nodo, si su valor sea menor que el padre, no hacemos nada. Si no, tenemos que cambiar ese nodo por el padre y controlar de nuevo, si es menor terminamos, o seguimos cambiando hasta llegar al nodo raíz. Habrá veces que cuando ingresas un valor nuevo, ese ya sea menor que el nodo padre, asi que no tenes que hacer nada, si siempre pasara lo mismo el costo de armar el heap sería `O(n)`. Ahora, el peor caso, es tener que llegar hasta la raíz haciendo swaps, sabemos que la altura de un árbol binario es del orden de `log(n)`, por lo tanto en el peor de los casos deberiamos recorrerlo `n` veces, por lo tanto la máxima complejidad es de `n*log( n )`.
 
 Ahora veamos con __Heapsort__ utiliza esta estructura para ordenar. Como vemos el heap está _semi_ ordenado. Por lo pronto sabemos que el nodo ráiz, tiene el máximo valor. Sabiendo eso, lo que hace el algoritmo es sacar el nodo raíz (seria el primer elemento ordenado),  y pone el última nodo del heap en la raíz -esto seguramente rompe la regla de que los padres sean mayores que sus hijos-, y luego reacomoda el árbol para que vuelva a ser un heap. El algoritmo repite esto hasta que no queden nodos en el heap. El resultado es el arreglo ordenado!
 
-![HeapSort](../_src/assets/06-Algoritmos-I/heapSort.gif)
+![HeapSort](../_src/assets/09-Algoritmos_2/heapSort.gif)
 
 Como tenemos que reordenar el árbol N veces, y habiamos dicho que ordenarlo costaba `O( log (n) )` entonces la complejidad este algoritmo es de `O(N * log(n) )`. Bastante bien, no?
 
@@ -62,7 +62,7 @@ Como tenemos que reordenar el árbol N veces, y habiamos dicho que ordenarlo cos
 
 Este algoritmo nos va a servir solamente para contar números enteros. Básicamente, lo que hace es iniciar un arreglo vacio y usarlo para contar los elementos. Para contar, va recorriendo el conjunto desordenado y suma en el arreglo en uno en la posición cuyo índice es igual al numero del conjunto.
 
-![count](../_src/assets/06-Algoritmos-I/countsort.gif)
+![count](../_src/assets/09-Algoritmos_2/countsort.gif)
 
 Finalmente, mira el arreglo de contadores, y vas 'sacando' los elementos que contó. Como lo pusimos en un índice que ya viene ordenado, al sacarlos vamos a tener todos los elementos ordenados.
 Nos damos cuenta que este algoritmo puede ocupar muchísima memoria, ya que si tenemos un conjunto con mucha variabilidad vamos a tener un arreglo muy grande y casi vació.
@@ -73,7 +73,7 @@ Con respecto a su complejidad, el algoritmo tiene que recorrer una vez el conjun
 
 Por último, vamos a mencionar al algoritmo Radix Sort. Este es muy parecido al Count Sort, en el sentido que sólo sirve para ordenar números enteros (en realidad, si logramos representar algo en números enteros, entonces podemos ordenar ese algo con Radix). Básicamente utiliza el mismo principio que Count, ya que mete en un arreglo fijo los números, pero ahora lo hace según las unidades de ese número, una vez ordenado repite el mismo proceso, pero con las decenas, y así sucesivamente hasta terminar con el arreglo ordenado. Veamos el ejemplo de abajo para comprender cómo funciona:
 
-![Radix](../_src/assets/06-Algoritmos-I/radixsort.gif)
+![Radix](../_src/assets/09-Algoritmos_2/radixsort.gif)
 
 ## Búsquedas
 
@@ -90,7 +90,7 @@ Cuando buscamos linealmente, en general, no tenemos ninguna pista sobre donde pu
 Por ejemplo, si tuvieramos que buscar un número en un arreglo, si ese arreglo estuviera ordenado, podriamos encontrarlo más rápido, no? (se acuerdan del juego de adivinar el número?) De hecho podriamos ir dividiendo el arreglo en mitades y preguntando si nuestro número está de un lado o del otro. Básicamente, estamos reduciendo el espacio de búsqueda a la mitad en cada paso. De esta forma, vamos a llegar a un espacio tan chico (un sólo elemento) donde encontrar el elemento que queríamos es trivial.
 Como ya sabemos, al dividir en dos varias veces, vamos a tener `log(n)` niveles, como tenemos que buscar una vez en cada _hoja_ que queda, la complejidad de nuestro algoritmo va a ser de `O( log( n ) )`. Bastante mejor que el anterior, no? Y la complejidad agregada al algoritmo es muy poca. Lo único importante es mantener los datos ordenados!
 
-![BinarySearch](../_src/assets/06-Algoritmos-I/binarySearch.gif)
+![BinarySearch](../_src/assets/09-Algoritmos_2/binarySearch.gif)
 
 ### Depth/Breadth First Search
 
@@ -118,11 +118,7 @@ La otra forma: BFS, visitaría los nodos de esta manera:
 
 ## Recursion
 
-`Para entender la recursión primero tenemos que entender la recursión.`
-
-![Recursión](../_src/assets/06-Algoritmos-I/recursion.jpg)
-
-Eso es la recursión, es cuando un un método se llama a sí mismo. Por ejemplo, el algoritmo quick sort es recursivo (se puede implementar de forma recursiva o no), ya que divide un conjunto y luego ordenada cada subconjunto usando quick Sort tambien.
+La recursión, es cuando un un método se llama a sí mismo. Por ejemplo, el algoritmo quick sort es recursivo (se puede implementar de forma recursiva o no), ya que divide un conjunto y luego ordenada cada subconjunto usando quick Sort tambien.
 La recursión puede ser muy poderosa, y puede ayudarnos a resolver algunos problemas que sin ella serían complicados de resolver. A veces puede no ser intuitiva, ya que estamos acostumbrados a pensar de manera iterativa más que recursiva.
 Veamos un ejemplo: Habiamos visto la función factorial, básicamente el factorial de n o n! es `n! = 1 * 2 * 3 * 4 * ... * n`. ej: `4! = 1 * 2 * 3 * 4`.
 Si lo definimos recursivamente, podemos decir que `n! = n * ( n-1 )!`. O sea, el factorial de n es igual a n por el factorial de n-1. Si lo piensan van a ver que se forma la misma fórmula que antes, pero hay un caso particular que es cuando `n = 0`, en ese caso tenemos que definir que hacemos. Por definición `0! = 1`, así que ese va a ser nuestro __caso base__: es el caso que devuelve algo concreto y donde se termina la recursión, su resultado va a ser usado para calcular los resultados de cada llamada.
@@ -147,9 +143,144 @@ Si ejecutamos eso tendriamos algo así:
 
 Esto que vemos arriba, es lo que se llama la __pila de recursión__, básicamente se va armando una pila en memoria, ya que la primera llamada necesita el resultado de la segunda, y la segunda de la tercera, y así sucesivamente hasta que llegamos al caso base. Desde ahí se puede empezar a resolver cada llamada dentro de la pila hasta que la completamos entera y tenemos nuestro resultado.
 
-![RecursionOverFlow](../_src/assets/06-Algoritmos-I/recursionof.jpg)
-
 Por lo tanto tenemos que estar seguros que cuando llamamos a un función recursiva no llenemos el _runtime stack_, ya que al llenarse va a crashear el runtime con un error de __[Stack Overflow](http://stackoverflow.com)__, o _desbordamiento de pila_.
+
+## Grafos
+
+Un **Grafo** es una estructura que permite almacenar objetos que tienen relación entre sí. Esos objetos se especifican como **Nodos**. La relación puede ser por distintas razones y también de distinta naturaleza y se especifica como **Enlaces** y puede tener asociado una etiqueta ó un valor numérico y además, esa relación entre los nodos puede ser unidireccional o bidireccional.
+
+Se definen matemáticamente con dos valores:
+V: Set de nodos (También llamados vértices).
+E: Enlaces, aristas o “edges”.
+Grafo = (Vértices, Enlaces) ==> G = (V, E)
+
+Las conexiones de un grafo pueden o no tener relación, puede tener no dirección o puede tenerla y quiere decir que la dirección viaja de un lado y no del otro.
+
+El **grado** de un vértice es el numero de enlaces o aristas que tienen a ese vértice como extremo. Una gráfica puede contener una arista de un vértice a si mismo; tal arista es un bucle cerrado (o lazo). Un bucle cerrado contribuye en 2 unidades al grado de un vértice.
+
+
+
+Aplicaciones:
+* Redes sociales (para relacionar usuarios)
+![Grafo_Redes_Sociales](../_src/assets/09-Algoritmos_2/grafos_twiter.jpg)
+* Sistemas de Navegación (Representaciones urbanas y en rutas)
+![Grafo_Ciudad](../_src/assets/09-Algoritmos_2/grafos_ciudad.jpg)
+* Sistemas de recomendación (Relación de productos con usuarios)
+* Enrutamiento de paquetes entre routers (Protocolo TCP/IP)
+
+## Problema de la Distancia más corta entre Nodos del Grafo
+
+El algoritmo de **Dijkstra** es utilizado para resolver esta problemática, se puede definir como un algoritmo que se puede utilizar para encontrar la distancia más corta posible desde un vértice de origen a cualquier otro vértice posible que exista en un gráfico ponderado, siempre que el vértice sea accesible desde el vértice de origen.
+El algoritmo de Dijkstra se enfoca en construir una solución pieza por pieza para el problema dado, eligiendo entonces la opción más beneficiosa.
+Su funcionamiento es el siguiente:
+1) Dados un par de vértices no visitados, seleccione el vértice con la menor distancia desde la fuente y visítelo.
+2) A continuación, se actualiza la distancia de cada vecino. Lo mismo se hace para el vértice visitado, que tiene una distancia actual mayor que la suma y el peso del borde dado entre ellos.
+3) Los pasos 1 y 2 deben repetirse hasta que no queden vértices no visitados.
+
+### Matríz de adyacencia
+
+Para representar un grafo, se puede utilizar lo que se conoce como **matríz de adyacencia**. La matriz de adyacencia de un grafo es simétrica. Si un vértice es aislado entonces la correspondiente fila (columna) esta compuesta sólo por ceros. Si el grafo es simple entonces la matriz de adyacencia contiene solo ceros y unos (matriz binaria) y la diagonal esta compuesta sólo por ceros.
+
+* Para convertir nuestro grafo en una matriz de adyacencia, analizaremos las conexiones de cada nodo y las representaremos con la forma de una matriz, donde relacionamos los grados de los vértices de cada uno de ellos.
+* La suma de las filas de cada vértice nos dirá el total de grados que tiene el vértice
+
+![Matriz_Adyacencia_1](../_src/assets/09-Algoritmos_2/grafos_matriz1.jpg)
+![Matriz_Adyacencia_2](../_src/assets/09-Algoritmos_2/grafos_matriz2.jpg)
+![Matriz_Adyacencia_3](../_src/assets/09-Algoritmos_2/grafos_matriz3.jpg)
+
+### Algoritmo de Dijkstra en Python.
+
+```python
+>>> import sys
+>>> 
+>>> class Graph():
+>>>     def __init__(self, vertx):
+>>>       self.V = vertx
+>>>       self.graph = [[0 for column in range(vertx)]
+>>>                       for row in range(vertx)]
+>>>                       
+>>>     def pSol(self, dist):
+>>>         print("Distancia del vértice desde el orígen")
+>>>         for node in range(self.V):
+>>>             print(node, "t", dist[node])
+>>> 
+>>>     def minDistance(self, dist, sptSet):
+>>>         min = sys.maxsize
+>>>         for v in range(self.V):
+>>>             if dist[v] < min and sptSet[v] == False:
+>>>                 min = dist[v]
+>>>                 min_index = v
+>>>         return min_index
+>>>  
+>>>     def dijk(self, source):
+>>>         dist = [sys.maxsize] * self.V
+>>>         dist[source] = 0
+>>>         sptSet = [False] * self.V
+>>>         for cout in range(self.V):
+>>>             u = self.minDistance(dist, sptSet)
+>>>             sptSet[u] = True
+>>>             for v in range(self.V):
+>>>                 if ((self.graph[u][v] > 0) 
+>>>                     and (sptSet[v] == False) 
+>>>                     and (dist[v] > dist[u] + self.graph[u][v])):
+>>>                     dist[v] = dist[u] + self.graph[u][v]
+>>>         self.pSol(dist)
+>>> 
+>>> f = Graph(9)
+>>> f.graph
+[[0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0]]
+>>> f.graph = [[0, 4, 0, 0, 0, 0, 0, 8, 0],
+           [4, 0, 8, 0, 0, 0, 0, 11, 0],
+           [0, 8, 0, 7, 0, 4, 0, 0, 2],
+           [0, 0, 7, 0, 9, 14, 0, 0, 0],
+           [0, 0, 0, 9, 0, 10, 0, 0, 0],
+           [0, 0, 4, 14, 10, 0, 2, 0, 0],
+           [0, 0, 0, 0, 0, 2, 0, 1, 6],
+           [8, 11, 0, 0, 0, 0, 1, 0, 7],
+           [0, 0, 2, 0, 0, 0, 6, 7, 0]
+           ]
+>>> f.dijk(0)
+Distancia del vértice desde el orígen
+0 t 0
+1 t 4
+2 t 12
+3 t 19
+4 t 21
+5 t 11
+6 t 9
+7 t 8
+8 t 14
+>>> f = Graph(5)
+>>> f.graph = [[0, 1, 0, 0, 0],
+           [1, 0, 1, 1, 0],
+           [0, 1, 0, 0, 0],
+           [0, 1, 0, 0, 1],
+           [0, 0, 0, 1, 0]]
+>>> f.dijk(0)
+Distancia del vértice desde el orígen
+0 t 0
+1 t 1
+2 t 2
+3 t 2
+4 t 3
+```
+
+![Grafos_ejemplo](../_src/assets/09-Algoritmos_2/grafos_ejemplo.png)
+
+## Grafos: Recursos Adicionales
+
+* [Teoría de Grafos] (https://www.topcoder.com/community/competitive-programming/tutorials/introduction-to-graphs-and-their-data-structures-section-1/)
+* [Euler y los puentes de Königsberg, actualmente Kaliningrado] (https://es.wikipedia.org/wiki/Grafo)
+* [Dijkstra-Floyd-Warshall] (http://micaminomaster.com.co/grafo-algoritmo/algoritmos-dijkstra-floyd-warshall-python-3-5/)
+* [Matríz de Adyacencia] (https://es.wikipedia.org/wiki/Matriz_de_adyacencia)
 
 ## Homework
 
