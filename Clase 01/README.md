@@ -240,7 +240,7 @@ Existen lenguajes de alto y bajo nivel que luego deben ser traducidos a lenguaje
 
 ## Homework
 
-Completa la tarea descrita en el archivo [Notebook] (https://github.com/soyHenry/DS-M1/blob/514e172fac473be825f3daf0af1534e83db57707/Clase%2001/Homework.ipynb)
+Completa la tarea descrita en el archivo [Notebook](https://github.com/soyHenry/DS-M1/blob/514e172fac473be825f3daf0af1534e83db57707/Clase%2001/Homework.ipynb)
 
 <table class="hide" width="100%" style='table-layout:fixed;'>
   <tr>
