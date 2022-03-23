@@ -187,9 +187,26 @@ Un sistema posicional es aquel en donde cada dígito posee un valor que depende 
 
 Por lo tanto, además del número de unidades que representa, considerado en forma aislado, tiene un significado o peso distinto según la posición que ocupa en el grupo de caracteres del que forma parte.
 
+### Representación de Cantidades:
+
+Uno de las necesidades principales por las que los humanos creamos los sistemas de numeración, es la de representar cantidades. Supongamos que queremos representar cantidades de estrellas, u usamos sistemas con diferente **base**, es decir, la cantidad de elementos distintos disponibles:
+
+
+| Base  |   | * | * * | * * * | * * * * | * * * * * | * * * * * * |
+| :---  |:-:|:-:| :-: | :---: | :-----: | :-------: | ----------: |
+| 10    | 0	| 1	| 2   | 3     | 4       | 5         | 6		        |
+| 2     | 0	| 1	| 10  | 11    | 100     | 101       | 110		      |
+| 5     | 0	| 1	| 2   | 3     | 4       | 10        | 11		      |
+
+| Base  | * * * * * * * | * * * * * * * * | * * * * * * * * * | * * * * * * * * * * |
+| :---  | :-----------: | :-------------: | :---------------: | ------------------: |
+| 10    | 7             | 8		            | 9                 | 10                  |
+| 2     | 111           | 1000	          | 1001              | 1010                |
+| 5     | 12            | 13		          | 14                | 20                  |
+
 ### Binario <> Decimal
 
-Ahora es momento de entender cómo transformar un número binario en un número decimal y viceversa. Si queremos realizar una transformación de binario a decimal debemos utilizar la fórmula que se encuentra a la derecha (2).
+Ahora es momento de entender cómo transformar un número binario en un número decimal y viceversa. Si queremos realizar una transformación de binario a decimal debemos utilizar la fórmula que se encuentra debajo.
 
 Por ejemplo:
 Supongamos 10101, comenzando de derecha a izquierda, cada 1 o 0 será multiplicado por 2^n en donde n describe la posición en el que se encuentra, siendo el más derecho, la posición 0. El resultado final será la sumatoria de todos ellos.
