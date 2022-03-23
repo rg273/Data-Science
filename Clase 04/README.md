@@ -885,9 +885,13 @@ Luis             6.5          7.0           4.0
 María            8.0          8.5           6.5
 ```
 
-## Homework
+## Homeworks
 
-Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/DS-M1/blob/b0e58ff3e809cb71e087f885080a346ea8208461/Clase%2004/Homework_04.ipynb)
+Completa la tarea descrita en los [Practica_1](https://github.com/soyHenry/DS-M1/blob/80f365123cc0c3af716fe2e3e9f651216141a694/Clase%2004/Homework_04_1.ipynb)
+
+Completa la tarea descrita en los [Practica_2](https://github.com/soyHenry/DS-M1/blob/80f365123cc0c3af716fe2e3e9f651216141a694/Clase%2004/Homework_04_2.ipynb)
+
+Completa la tarea descrita en los [Practica_3](https://github.com/soyHenry/DS-M1/blob/80f365123cc0c3af716fe2e3e9f651216141a694/Clase%2004/Homework_04_3.ipynb)
 
 <table class="hide" width="100%" style='table-layout:fixed;'>
   <tr>
