@@ -70,7 +70,7 @@ dequeue – elimina el elemento al principio de la cola:
 
 ![](../_src/assets/05-Estructuras_Datos_1/ejemplo_cola.jpg)
 
-### Implementación de una pila en Python
+### Implementación de una cola en Python
 
 ```python
 >>> class Estructura_Cola(object):
