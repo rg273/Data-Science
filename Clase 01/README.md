@@ -247,7 +247,7 @@ Completa la tarea descrita en el archivo [Notebook](https://github.com/soyHenry/
 <table class="hide" width="100%" style='table-layout:fixed;'>
   <tr>
     <td>
-      <a href="https://airtable.com/shrCubCO1XC2BwYIT?prefill_clase=01-Intro">
+      <a href="https://airtable.com/shrCubCO1XC2BwYIT?prefill_clase=1-Introtodata">
         <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
         <br>
         Hacé click acá para dejar tu feedback sobre esta clase.
