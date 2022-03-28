@@ -4,49 +4,48 @@
 ## Introducción al cómputo
 
 Posiblemente la primera computadora fue creada por los **antiguos griegos** el cual tenia el propósito de calcular las posiciones del Sol, Luna y algunos otros cuerpos celestes.
+##### [Mecanismo Anticitera](https://es.wikipedia.org/wiki/Mecanismo_de_Anticitera)
+<img src="../_src/assets/00-IntroToCS/computadora-griega.jpg"  height="250">
 
-![Mecanismo Anticitera](../_src/assets/00-IntroToCS/computadora-griega.jpg)
-<h5>Mecanismo Anticitera</h5>
+Miles de años después se creo el [**telar de Jacquard**](https://es.wikipedia.org/wiki/Telar_de_Jacquard), que funcionaba con tarjetas que se creaban con pequeños huecos que representaban la información que el telar tenía que hacer en un pedazo de tela.
 
-Miles de años después se creo el **telar de Jacquard**, que funcionaba con tarjetas que se creaban con aujeros que representaban la información que el telar tenía que hacer en un pedazo de tela.
-
-![Telar de Jacquard](../_src/assets/00-IntroToCS/Telar-de-Jacquard.jpg)
+<img src="../_src/assets/00-IntroToCS/Telar-de-Jacquard.jpg"  height="250">
 <h5>Telar de Jacquard</h5>
 
-Después llego el **motor analítico de Charles Babbage**, el cual ocupó la tecnología de punta en su época para poder realizar cálculos.
+Después llego el [**motor analítico de Charles Babbage**](https://es.wikipedia.org/wiki/M%C3%A1quina_anal%C3%ADtica#:~:text=La%20m%C3%A1quina%20anal%C3%ADtica%20es%20el,hasta%20su%20muerte%20en%201871.), el cual ocupó la tecnología de punta en su época para poder realizar cálculos.
 
-![Motor analítico de Charles Babbage](../_src/assets/00-IntroToCS/motor-babbage.jpg)
+<img src="../_src/assets/00-IntroToCS/motor-babbage.jpg"  height="250">
 <h5>Motor analítico de Charles Babbage</h5>
 
-A finales del siglo XIX el gobierno de EE.UU. tenia serios problemas para realizar los censos como mandaba la constitución. En este momento fue cuando llegó la **máquina tabuladora**, la cual se utilizó para realizar los censos con tarjetas, obteniendo resultados más rápidos y certeros.
+A finales del siglo XIX el gobierno de EE.UU. tenia serios problemas para realizar los censos como mandaba la constitución. En este momento fue cuando llegó la [**máquina tabuladora**](https://es.wikipedia.org/wiki/Tabuladora), la cual se utilizó para realizar los censos con tarjetas, obteniendo resultados más rápidos y certeros.
 
-![Máquina Tabuladora](../_src/assets/00-IntroToCS/maquina-tabuladora.jpg)
+<img src="../_src/assets/00-IntroToCS/maquina-tabuladora.jpg"  height="250">
 <h5>Máquina Tabuladora</h5>
 
 Antiguamente existía la **profesión de computadora**, la cual eran personas que se dedicaban a seguir ciertas instrucciones para obtener los resultados. Sin embargo estos resultados estaban plagados de errores. Al inicio del siglo XX ya existían compañías que tenían la necesidad de realizar cálculos exactos y a gran escala. Es aquí donde llegan **Alan Turing** y **Alonzo Church** con la idea de que todos los algoritmos desarrollados por la humanidad podían ser reducidas a una máquina imaginaria, que tuviera una cinta infinita donde apuntarían símbolos y estos símbolos se pudieran manipular. Gracias a esa idea, se comenzó la carrera para crear la primera computadora electrónica, el cual fue el **ENIAC**.
 
-![Alonzo Chruch y Alan Turing](../_src/assets/00-IntroToCS/church_alonzo.jpg)
-![Alonzo Chruch y Alan Turing](../_src/assets/00-IntroToCS/alan-turing.jpg)
-![Alonzo Chruch y Alan Turing](../_src/assets/00-IntroToCS/eniac.jpg)
+<img src="../_src/assets/00-IntroToCS/church_alonzo.jpg"  height="250">
+<img src="../_src/assets/00-IntroToCS/alan-turing.jpg"  height="250">
+<img src="../_src/assets/00-IntroToCS/eniac.jpg"  height="250">
 <h5>Alonzo Chruch, Alan Turing y la maquina ENIAC respectivamente.</h5>
 
 **John von Neumann** se dio cuenta de que en el hardware no solo se podía almacenar el poder de cómputo, también los programas para ejecutar. A esta arquitectura se le llama la **arquitectura de von Neumman.** De esta arquitectura nace la máquina **EDVAC** (Electronic Discrete Automatic Computer).
 
-![John von Neumann junto a la maquina EDVAC.](../_src/assets/00-IntroToCS/neumann-edvac.jpeg)
+<img src="../_src/assets/00-IntroToCS/neumann-edvac.jpeg"  height="250">
 <h5>John von Neumann junto a la máquina EDVAC.</h5>
 
-![La arquitectura von Neumann.](../_src/assets/00-IntroToCS/arquitectura-neumann.png)
+<img src="../_src/assets/00-IntroToCS/arquitectura-neumann.png"  height="250">
 <h5>La arquitectura von Neumann.</h5>
 
-Con la llegada de los **microchips** llegó la pauta para la computación de hoy en día. Estos microchips, con el tiempo, lograron ser tan pequeños gracias a la tecnología de la **fotónica.**
+Con la llegada de los **microchips** llegó la pauta para la computación de hoy en día. Estos microchips, con el tiempo, lograron ser tan pequeños gracias a la tecnología de la [**fotónica.**](https://es.wikipedia.org/wiki/Fot%C3%B3nica)
 
-![Microchip.](../_src/assets/00-IntroToCS/microchips.jpg)
-![Oblea de Silicio.](../_src/assets/00-IntroToCS/oblea-silicio.jpg)
+<img src="../_src/assets/00-IntroToCS/microchips.jpg"  height="250">
+<img src="../_src/assets/00-IntroToCS/oblea-silicio.jpg"  height="250">
 <h5>Microchip y Oblea de Silicio respectivamente.</h5>
 
 Ya en nuestros tiempos llegó la **nube**, que son data centers que no son más que miles o millones de computadoras.
 
-![Sala de servidores de una nube.](../_src/assets/00-IntroToCS/nube.jpg)
+<img src="../_src/assets/00-IntroToCS/nube.jpg"  height="250">
 <h5>Sala de servidores de una nube.</h5>
 
 ## Computer Science
@@ -69,11 +68,13 @@ En última instancia, ingeniería computacional. En esta instancia podemos encon
 ## Circuitos Eléctricos
 
 Para poder entender el funcionamiento de una computadora y sus orígenes, antes tenemos que conocer qué es y cómo funciona un circuito eléctrico.
+
 Un circuito eléctrico es una interconexión de componentes eléctricos que transporta corriente eléctrica a través de una trayectoria cerrada. Imaginemos una batería, ahora pensemos que dicha batería está conectada a través de cables a una lámpara, si deseamos prender la lámpara necesitamos que la misma reciba corriente, ¿Cómo haríamos eso? Podemos tener un interruptor que, al cerrarlo prende la lámpara.
 
 ![AND Operator](../_src/assets/00-IntroToCS/AND.png)
 
 En el caso ilustrado para poder prender la lámpara necesitamos cerrar tanto A como B. Esto se debe a que si cierro A pero no B, la energía de la batería logra llegar hasta el interruptor B, pero dado que el interruptor B está abierto, la energía se pierde y por lo tanto no llega al otro extremo derecho, no llega a la lámpara.
+
 Si A está abierto, pero B cerrado, la energía no llega al interruptor B, y por consiguiente, la lámpara no podría prenderse.
 En el caso de que tanto el interruptor A como el interruptor B estén cerrados, la energía logra fluir hasta llegar a la lámpara y lograr prenderla.
 
@@ -120,6 +121,7 @@ A | NOT
 ## Half Adder
 
 En función de las compuertas o puertas lógicas y a través de la combinación de estas podemos lograr diversas operaciones, por ejemplo un sumador de números.
+
 En la escuela nos enseñaron a sumar con números decimales pero, las computadoras en su interior trabajan con un sistema binario, es decir sistema numérico de dos dígitos el 1 y el 0.
 Por ejemplo, si quisiéramos sumar 19+24 sabemos que la suma de 9+4 = 13, por lo tanto en el resultado final en la unidad nos queda un 3 y debemos “llevarnos” la decena. Luego, para la decena debemos sumar 1 + 2 + 1 = 4. Obteniendo como resultado final 43.
 En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND mientras que el XOR efectúa la suma. Si quisiéramos trasladar el mismo ejemplo ya mencionado, en primer lugar debemos conocer cual es el valor de 19 y 24 en binario. Más adelante veremos cómo hacer dicha transformación, pero por ahora, confíen que 19 = 10011 y 24 = 11000.
@@ -133,14 +135,14 @@ Comenzando de derecha a izquierda. 1 AND 0 = 0 por lo tanto NO acarreo, y por ot
 1 | 0   | 0     | 1   | 1
 -- | --- | ----- | ----| ---
 1| 1 | 0  |0 |0
-| |   |1 |1
+|  | | |1 |1
 
 0 AND 0 = 0, NO acarreo. Luego, 0 XOR 0 = 0. Por lo tanto,
 
 1 | 0   | 0     | 1   | 1
 -- | --- | ----- | ----| ---
 1| 1 | 0  |0 |0
-|1 |  0 |1 |1
+| | 1 |  0 |1 |1
 
 Llegamos al último caso, 1 AND 1 = 1, por lo tanto hay acarreo.
 
