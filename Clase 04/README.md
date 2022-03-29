@@ -896,7 +896,7 @@ Completa la tarea descrita en los [Practica_3](https://github.com/soyHenry/DS-M1
 <table class="hide" width="100%" style='table-layout:fixed;'>
   <tr>
     <td>
-      <a href="https://airtable.com/shrSzEYT4idEFGB8d?prefill_clase=00-PrimerosPasos">
+      <a href="https://airtable.com/shrCubCO1XC2BwYIT?prefill_clase=4-Pandas">
         <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
         <br>
         Hacé click acá para dejar tu feedback sobre esta clase.
