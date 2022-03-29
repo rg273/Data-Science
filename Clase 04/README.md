@@ -77,9 +77,9 @@ dtype: float64
 
 Existen varias propiedades o métodos para ver las características de una serie.
 
-s.size : Devuelve el número de elementos de la serie s.
-s.index : Devuelve una lista con los nombres de las filas del DataFrame s.
-s.dtype : Devuelve el tipo de datos de los elementos de la serie s.
+* s.size : Devuelve el número de elementos de la serie s.
+* s.index : Devuelve una lista con los nombres de las filas del DataFrame s.
+* s.dtype : Devuelve el tipo de datos de los elementos de la serie s.
 
 ```python
 >>> import pandas as pd
@@ -272,7 +272,7 @@ Economía        4.5
 dtype: float64
 ```
 
-### Eliminar los dados desconocidos en una serie
+### Eliminar los datos desconocidos en una serie
 
 Los datos desconocidos representan en Pandas por NaN y los nulos por None. Tanto unos como otros suelen ser un problema a la hora de realizar algunos análisis de datos, por lo que es habitual eliminarlos. Para eliminarlos de una serie se utiliza el siguiente método:
 
@@ -300,7 +300,7 @@ dtype: object
 
 ### La clase de objetos DataFrame
 
-Un objeto del tipo **DataFrame** define un conjunto de datos estructurado en forma de tabla donde cada columna es un objeto de tipo Series, es decir, todos los datos de una misma columna son del mismo tipo, y las filas son registros que pueden contender datos de distintos tipos.
+Un objeto del tipo **DataFrame** define un conjunto de datos estructurado en forma de tabla donde cada columna es un objeto de tipo Series, es decir, todos los datos de una misma columna son del mismo tipo, y las filas son registros que pueden contener datos de distintos tipos.
 Un DataFrame contiene dos índices, uno para las filas y otro para las columnas, y se puede acceder a sus elementos mediante los nombres de las filas y las columnas.
 Ejemplo. El siguiente DataFrame contiene información sobre los alumnos de un curso. Cada fila corresponde a un alumno y cada columna a una variable.
 
@@ -756,7 +756,7 @@ Para ordenar un DataFrame de acuerdo a los valores de una determinada columna se
 ...
 ```
 
-### Eliminar las filas con dados desconocidos en un DataFrame
+### Eliminar las filas con datos desconocidos en un DataFrame
 
 Para eliminar las filas de un DataFrame que contienen datos desconocidos NaN o nulos None se utiliza el siguiente método:
 
