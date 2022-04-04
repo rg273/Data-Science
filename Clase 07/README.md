@@ -44,11 +44,11 @@ Un árbol de este estilo puede estar _balanceado_ o no: vamos a decir que un ár
 
 Lo bueno de estos árboles, es que si se encuentra _balanceado_, necesitamos no más de _log n_ pasos para llegar a cualquier nodo! Esto los hace excelente estructuras de datos para guardar información que luego vamos a tener que buscar.
 
-Veamos una manera rápida de implementar un árbol binario en Javascript usando arreglos. Básicamente lo que vamos a hacer es ir guardando cada nodo con sus hijos en una posición particular. Empezamos poniendo el nodo root como primer elemento del arreglo. Luego vamos a poner su hijo izquierdo en la posición 1 y el derecho en la 2. El hijo izquierdo de 1 iria en la posición 3 y el derecho en la 4. Los hijos de 2 irian en 5 y 6, respectivamente. En esta imagen se va a entender mejor:
+Veamos una manera rápida de implementar un árbol binario usando listas en Python. Básicamente lo que vamos a hacer es ir guardando cada nodo con sus hijos en una posición particular. Empezamos poniendo el nodo root como primer elemento de la lista. Luego vamos a poner su hijo izquierdo en la posición 1 y el derecho en la 2. El hijo izquierdo de 1 iria en la posición 3 y el derecho en la 4. Los hijos de 2 irian en 5 y 6, respectivamente. En esta imagen se va a entender mejor:
 
 ![BinaryArray](../_src/assets/07-Estructuras_Datos_3/binaryArray.png)
 
-Ahora, si lo pensamos cada hijo de un nodo está en la posición ubicado en `i*2+1` y `i*2+2` siendo `i` el índice del arreglo. Por lo tanto podemos implementar este árbol usando lo siguiente:
+Ahora, si lo pensamos cada hijo de un nodo está en la posición ubicado en `i*2+1` y `i*2+2` siendo `i` el índice de la lista. Por lo tanto podemos implementar este árbol usando lo siguiente:
 
 ```python
 izquierdo[i] = 2*i + 1 # el hijo izquierdo del nodo que está en i

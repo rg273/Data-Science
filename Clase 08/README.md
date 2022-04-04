@@ -23,7 +23,7 @@ O para hacerte el desayuno también:
 
 En `Ciencias de la computación` los algoritmos van a ser los pasos que la computadora tiene que _seguir_ para poder completar una tarea. Conocer y encontrar buenos algoritmos y saber cuando utilizarlos es una de las prácticas fundamentales en esta ciencia.
 
-Algunos ejemplos de la vida real:  ¿Cómo hace Skype para transmisir audio y video en tiempo real por internet? _Utilizan algoritmos de compresión de audio y video en ambos extremos de la comunicación!_
+Algunos ejemplos de la vida real:  ¿Cómo hace Skype para transmitir audio y video en tiempo real por internet? _Utilizan algoritmos de compresión de audio y video en ambos extremos de la comunicación!_
 
 ## Un algoritmo para salir de un laberinto
 
