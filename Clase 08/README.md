@@ -101,9 +101,9 @@ _Le encuentran algún problema a cómo está definido el algortimo? Podría fall
 
 De hecho estas dos condiciones a veces van en contra: encontrar la solución perfecta atenta contra el tiempo que va a tardar, y hacerlo rápido atenta contra la precisión de la respuesta. Vamos a tener que saber qué usamos en cada caso!
 
-### ¿Cómo medimos la eficienta del un algoritmo?
+### ¿Cómo medimos la eficiencia de un algoritmo?
 
-Lo más fácil y rápido de hacer es contar cuanto tiempo le lleva al algoritmo encontrar la respuesta que buscamos. Pero eso nos diría la eficiencia de ese algoritmo sólamente para la computadora que corrió , con los datos que tenia y en el lenguaje que se haya implementado, no?
+Lo más fácil y rápido de hacer es contar cuanto tiempo le lleva al algoritmo encontrar la respuesta que buscamos. Pero eso nos diría la eficiencia de ese algoritmo solamente para la computadora en que corrió, con los datos que tenia y en el lenguaje que se haya implementado, no?
 Entonces... como hacemos para _comparar_ la eficiencia de distintos algoritmos?
 Para eso se hace un análisis conocido como `Asymptotic Analysis`, vamos a entender el concepto con un juego.
 
@@ -360,9 +360,9 @@ A los últimos los vamos a poder usar sólamente con entradas que sean muy peque
 
 __P - Tiempo polinómico__: Si la cantidad de operaciones que necesita un algoritmo para terminar es un polinomio (no importa si es muy grande), decimos que el algoritmo termina en tiempo polinómico. Además, si para llegar al resultado realiza una cierta cantidad de pasos, y siempre va a realizar los mismos, podemos decir que el algoritmo es __deterministico__. Esto es bueno, quiere decir que podemos calcular cuanto va a tardar a priori.
 
-__NP - Tiempo polinómico no deterministico__: Estos algoritmos, no son _deterministicos_, esto se debe a que encontrar la solución real nos puede llegar a tomar _muchísimo_ timepo! Entonces para resolverlos, lo que hacemos es ir probando algunas soluciones, o descartando las soluciones que sabemos que no son soluciones.
+__NP - Tiempo polinómico no deterministico__: Estos algoritmos, no son _deterministicos_, esto se debe a que encontrar la solución real nos puede llegar a tomar _muchísimo_ tiempo! Entonces para resolverlos, lo que hacemos es ir probando algunas soluciones, o descartando las soluciones que sabemos que no son soluciones.
 A este lo vamos a entender con un ejemplo:
-Imaginen que nos dan un set de número y nos preguntan si algún subset del set suma 0:
+Imaginen que nos dan un set de números y nos preguntan si algún subset del set suma 0:
 
 ```js
 {-10, 60, 95, 25, -70, -50}
@@ -377,7 +377,7 @@ Ahora, piensen que en algún momento alguien puede descubrir (o inventar ) un al
 P = NP ?
 ```
 
-## Algoritmos de búsqueda
+## Algoritmos de Ordenamiento y Búsqueda
 
 Buscar algo en un conjunto de cosas es una tarea con la que nos encontramos todo el tiempo cuando progamamos, por lo tanto, no nos sorprende que los algoritmos más usados (y por lo tanto más estudiados ) son los algoritmos de búsqueda. Es importante conocer estos algoritmos ya que para crearlos se usarón técnicas que también nos van a servir para resolver otro problemas y también vemos como aprovechan ciertas estructuras de datos.
 

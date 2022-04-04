@@ -177,6 +177,8 @@ Su funcionamiento es el siguiente:
 2) A continuación, se actualiza la distancia de cada vecino. Lo mismo se hace para el vértice visitado, que tiene una distancia actual mayor que la suma y el peso del borde dado entre ellos.
 3) Los pasos 1 y 2 deben repetirse hasta que no queden vértices no visitados.
 
+![Grafos_ejemplo](../_src/assets/09-Algoritmos_2/Dijkstra_ejemplo.jpg)
+
 ### Matríz de adyacencia
 
 Para representar un grafo, se puede utilizar lo que se conoce como **matríz de adyacencia**. La matriz de adyacencia de un grafo es simétrica. Si un vértice es aislado entonces la correspondiente fila (columna) esta compuesta sólo por ceros. Si el grafo es simple entonces la matriz de adyacencia contiene solo ceros y unos (matriz binaria) y la diagonal esta compuesta sólo por ceros.
