@@ -885,6 +885,11 @@ Luis             6.5          7.0           4.0
 María            8.0          8.5           6.5
 ```
 
+## Recursos adicionales
+
+* [Ciento uno ejercicios de Pandas] (https://github.com/rougier/numpy-100)
+https://www.machinelearningplus.com/python/101-pandas-exercises-python/)
+
 ## Homeworks
 
 Completa la tarea descrita en los [Practica_1](https://github.com/soyHenry/DS-M1/blob/80f365123cc0c3af716fe2e3e9f651216141a694/Clase%2004/Homework_04_1.ipynb)
